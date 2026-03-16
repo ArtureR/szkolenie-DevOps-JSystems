@@ -1,6 +1,7 @@
 name: 01 - Build Blocks
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
