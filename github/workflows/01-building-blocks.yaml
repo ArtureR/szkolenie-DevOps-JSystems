@@ -19,5 +19,4 @@ jobs:
           echo "I will fail now"
           exit 1
       - name: Say Goodbye
-        run: |
-          echo "This step will be skipped if the previous step fails"
+        run: "This step will be skipped if the previous step fails"
