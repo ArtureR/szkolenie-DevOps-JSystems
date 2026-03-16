@@ -1,0 +1,11 @@
+name: 02 - Build Blocks
+
+on:
+  push:
+
+jobs:
+  echo:
+    runa-on: ubuntu-latest
+    steps:
+      - name: Show the trigger
+        run: echo "Event name: ${{ github.event_name }}"  
