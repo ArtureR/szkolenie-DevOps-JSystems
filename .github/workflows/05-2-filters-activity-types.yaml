@@ -13,4 +13,4 @@ jobs:
       - name: show message
         run: echo "Running whenever a PR is closed."
 
-## dummy zmiana dla PR
+## dummy zmiana dla PR 2
