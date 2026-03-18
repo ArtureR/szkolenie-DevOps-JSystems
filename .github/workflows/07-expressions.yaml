@@ -4,10 +4,10 @@ on:
   push:
   workflow_dispatch:
     inputs:
-        debug:
+      debug:
         type: boolean
         default: false
-
+        
 jobs:
   echo:
     name: Pobierz informacje o pogodzie
