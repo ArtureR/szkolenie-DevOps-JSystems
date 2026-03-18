@@ -1,0 +1,28 @@
+name: 06-03 – pogoda
+
+on: 
+  workflow_dispatch:
+    inputs:
+      city:
+        description: "Podaj miasto, dla którego wyświetlona zostanie pogoda"
+        type: string
+        default: "Wrocław"
+
+env:
+  MY_KLUCZYK: '901b2799309f24e7c5d833aacc8c61a4'
+  API_KEY: ${{ secrets.MY_API_KEY_W }}
+
+jobs:
+  pogoda:
+    name: Pobierz informacje o pogodzie
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./cwiczenia/06-context/pogoda
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Sprawdzanie pogody
+        run: |
+          bash ./start.sh "${{ inputs.city }}" "${{ env.API_KEY }}" >> $GITHUB_STEP_SUMMARY
