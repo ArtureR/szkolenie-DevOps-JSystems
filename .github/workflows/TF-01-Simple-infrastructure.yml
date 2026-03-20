@@ -10,7 +10,7 @@ on:
 
 defaults:
   run:
-    working-directory: TERRAFORM/01
+    working-directory: cwiczenia/TERRAFORM/01
 
 jobs:
   terraform-destroy:
